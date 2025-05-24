@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>專案作品 - 廖貫呈</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style>
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-icon {
+      font-size: 2.5rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+    
+    .project-category {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .category-finance {
+      background-color: #d1e7dd;
+      color: #0f5132;
+    }
+    
+    .category-programming {
+      background-color: #cfe2ff;
+      color: #084298;
+    }
+    
+    .category-analysis {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    
+    .filter-buttons {
+      margin-bottom: 2rem;
+    }
+    
+    .filter-buttons .btn {
+      margin: 0 5px;
+      border-radius: 20px;
+      padding: 8px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">廖貫呈</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#about">關於我</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#education">學歷</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#skills">專業技能</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#experience">實習經驗</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#projects">專案作品</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">聯絡方式</a></li>
+            <li class="nav-item"><a class="nav-link" href="slideshow.html">幻燈片</a></li>
+            <li class="nav-item"><a class="nav-link active" href="projects.html">所有專案</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h1>專案作品集</h1>
+        <p class="lead">我在金融、程式設計和商業分析領域的全面展示</p>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12 text-center filter-buttons">
+        <button class="btn btn-outline-primary active" data-filter="all">所有專案</button>
+        <button class="btn btn-outline-success" data-filter="finance">金融</button>
+        <button class="btn btn-outline-info" data-filter="programming">程式設計</button>
+        <button class="btn btn-outline-warning" data-filter="analysis">分析</button>
+      </div>
+    </div>
+
+    <div class="row project-container">
+      <!-- 金融專案 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="finance">
+        <div class="card project-card position-relative">
+          <span class="project-category category-finance">金融</span>
+          <div class="card-body text-center">
+            <div class="project-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="card-title">台泥財報及股價分析</h3>
+            <p class="card-text">
+              深入分析台灣水泥公司的財務報表，並結合市場趨勢和技術指標對其股價進行分析和預測。
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="badge bg-primary me-1">Python</span>
+                <span class="badge bg-secondary me-1">Pandas</span>
+                <span class="badge bg-info">數據分析</span>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 分析專案 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="analysis">
+        <div class="card project-card position-relative">
+          <span class="project-category category-analysis">分析</span>
+          <div class="card-body text-center">
+            <div class="project-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <h3 class="card-title">友達光電招募流程研究</h3>
+            <p class="card-text">
+              對友達光電的人才招募流程進行全面研究，分析其招聘策略、面試流程和人才選拔標準，提出優化建議。
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="badge bg-warning text-dark me-1">研究</span>
+                <span class="badge bg-secondary me-1">數據分析</span>
+                <span class="badge bg-success">策略規劃</span>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 程式設計專案 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="programming">
+        <div class="card project-card position-relative">
+          <span class="project-category category-programming">程式設計</span>
+          <div class="card-body text-center">
+            <div class="project-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="card-title">台積電股價人工智慧預測</h3>
+            <p class="card-text">
+              運用機器學習和人工智慧技術對台積電股價進行預測，結合多種預測模型提高準確性，分析影響股價的關鍵因素。
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="badge bg-primary me-1">Python</span>
+                <span class="badge bg-secondary me-1">機器學習</span>
+                <span class="badge bg-info">深度學習</span>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 分析專案 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="analysis">
+        <div class="card project-card position-relative">
+          <span class="project-category category-analysis">分析</span>
+          <div class="card-body text-center">
+            <div class="project-icon">
+              <i class="fas fa-globe-asia"></i>
+            </div>
+            <h3 class="card-title">韓流文化分析研究</h3>
+            <p class="card-text">
+              研究韓流文化在台灣的影響與發展，分析其商業模式、行銷策略和文化傳播方式，探討跨文化傳播的成功因素。
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="badge bg-warning text-dark me-1">市場研究</span>
+                <span class="badge bg-secondary me-1">文化分析</span>
+                <span class="badge bg-success">數據視覺化</span>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5 text-center">
+      <div class="col-12">
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-arrow-left me-1"></i> 返回個人作品集</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p>&copy; 2024 廖貫呈 | 個人作品集</p>
+      <div class="mt-2">
+        <a href="https://www.linkedin.com/" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+        <a href="mailto:B11008068@gmail.com" class="mx-2"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="static/js/script.js"></script>
+  
+  <script>
+    // 專案過濾功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+      const projectItems = document.querySelectorAll('.project-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filterValue = this.getAttribute('data-filter');
+          
+          // 更新活動按鈕
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // 過濾專案
+          projectItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+              // 添加動畫
+              setTimeout(() => {
+                item.style.opacity = 1;
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              item.style.opacity = 0;
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

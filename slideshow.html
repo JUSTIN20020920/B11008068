@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>專案幻燈片 - 廖貫呈</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <style>
+    .carousel-item {
+      height: 70vh;
+      background-color: #000;
+    }
+    
+    .carousel-item img {
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 5px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">廖貫呈</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#about">關於我</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#education">學歷</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#skills">專業技能</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#experience">實習經驗</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#projects">專案作品</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">聯絡方式</a></li>
+            <li class="nav-item"><a class="nav-link active" href="slideshow.html">幻燈片</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">所有專案</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h1>專案作品集</h1>
+        <p class="lead">我的金融分析和程式設計專案視覺展示</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="第一張幻燈片"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="第二張幻燈片"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="第三張幻燈片"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="第四張幻燈片"></button>
+          </div>
+          
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#3498db"/>
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="20px">台泥財報及股價分析</text>
+              </svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>台泥財報及股價分析</h5>
+                <p>深入分析台灣水泥公司的財務報表與股價走勢</p>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#2ecc71"/>
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="20px">友達光電招募流程研究</text>
+              </svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>友達光電招募流程研究</h5>
+                <p>分析友達光電的人才招募策略與流程</p>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#e74c3c"/>
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="20px">台積電股價人工智慧預測</text>
+              </svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>台積電股價人工智慧預測</h5>
+                <p>運用機器學習技術預測台積電股價走勢</p>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#9b59b6"/>
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" font-size="20px">韓流文化分析研究</text>
+              </svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>韓流文化分析研究</h5>
+                <p>分析韓流文化在台灣的影響與商業模式</p>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一張</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一張</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5 text-center">
+      <div class="col-12">
+        <a href="index.html" class="btn btn-primary me-2"><i class="fas fa-arrow-left me-1"></i> 返回個人作品集</a>
+        <a href="projects.html" class="btn btn-outline-primary"><i class="fas fa-project-diagram me-1"></i> 查看所有專案</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p>&copy; 2024 廖貫呈 | 個人作品集</p>
+      <div class="mt-2">
+        <a href="https://www.linkedin.com/" target="_blank" class="mx-2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank" class="mx-2"><i class="fab fa-github"></i></a>
+        <a href="mailto:B11008068@gmail.com" class="mx-2"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="static/js/script.js"></script>
+</body>
+
+</html>
